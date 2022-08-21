@@ -1,0 +1,13 @@
+<ul id="menu" class="menu">
+  <li class="menu-item">Имя: {{name}}</li>
+  <li class="menu-item">Вес: {{weight}}</li>
+  <li class="menu-item">Рост: {{height}}</li>
+</ul>
+<div>
+  <p>Умения</p>
+  <ul>
+    {{#each abilities}}
+      <li>{{ability.name}}</li>
+    {{/each}}
+  </ul>
+</div>
