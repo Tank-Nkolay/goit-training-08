@@ -7,7 +7,7 @@
 // import pokemonCardTpl from './';
 // import q from '../../templat';
 
-const qqq = document.querySelector('.qqq');
+let qqq = document.querySelector('.qqq');
 const www = document.querySelector('.form');
 let onForm;
 let x;
@@ -16,6 +16,8 @@ www.addEventListener('submit', onSearch);
 
 function onSearch(e) {
   e.preventDefault();
+
+  qqq.innerHTML = '';
 
   const form = e.currentTarget;
   onForm = form.elements.query.value;
