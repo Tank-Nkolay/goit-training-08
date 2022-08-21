@@ -2,7 +2,7 @@
 // пример ПОКЕМОН
 // -----------------------------------------------------------------------------
 
-import pokemonCardTpl from '../../template';
+// import pokemonCardTpl from '../../template/pokemon.hbs';
 
 fetch('https://pokeapi.co/api/v2/pokemon/2')
   .then(response => {
