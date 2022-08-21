@@ -20,6 +20,7 @@
   "dependencies": {
     "@vimeo/player": "^2.17.1",
     "bower-npm-resolver": "^0.11.0",
+    "express-handlebars": "^6.0.6",
     "flatpickr": "^4.6.13",
     "hbs": "^4.2.0",
     "lodash.throttle": "^4.1.1",
@@ -31,7 +32,9 @@
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "path-browserify": "^1.0.1",
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
