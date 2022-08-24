@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-training-08/",
-    "server": "json-server --watch db.json"
+    "server": "json-server --watch db.json -d 300"
   },
   "repository": {
     "type": "git",
