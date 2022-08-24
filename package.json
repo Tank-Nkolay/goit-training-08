@@ -5,7 +5,8 @@
   "homepage": "https://tank-nkolay.github.io/goit-training-08",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-training-08/"
+    "build": "parcel build src/*.html --public-url /goit-training-08/",
+    "server": "json-server --watch db.json"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "json-server": "^0.17.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "path-browserify": "^1.0.1",
