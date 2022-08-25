@@ -36,9 +36,24 @@
 // }
 
 // -----------------------------------------------------------------------------
-// пример ПОКЕМОН
+// пример РАБОТА С МАСИВОМ БЭКЕНД
 // -----------------------------------------------------------------------------
 
-fetch('http://localhost:3000/books')
-  .then(res => res.json())
-  .then(console.log);
+const BASE_URL = 'http://localhost:3000';
+
+function fetchBooks() {
+  fetch(`${BASE_URL}/books`)
+    .then(res => res.json())
+    .then(console.log);
+}
+
+fetchBooks();
+
+function fetchBookById(bookId) {
+  fetch(`${BASE_URL}/books/${bookId}`)
+    .then(res => res.json())
+    .then(console.log);
+}
+
+fetchBookById(5);
+fetchBookById(7);
