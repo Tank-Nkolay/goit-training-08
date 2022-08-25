@@ -39,25 +39,99 @@
 // пример РАБОТА С МАСИВОМ БЭКЕНД
 // -----------------------------------------------------------------------------
 
-// ЧИТАЛКА
+// ЧИТАЛКА ============================================
+
+// const BASE_URL = 'http://localhost:3000';
+
+// function fetchBooks() {
+//   fetch(`${BASE_URL}/books`)
+//     .then(res => res.json())
+//     .then(console.log);
+// }
+
+// fetchBooks();
+
+// function fetchBookById(bookId) {
+//   fetch(`${BASE_URL}/books/${bookId}`)
+//     .then(res => res.json())
+//     .then(console.log);
+// }
+
+// fetchBookById(5);
+// fetchBookById(7);
+
+// ПИСАЛКА ============================================
+
+// const newBook = {
+//   title: 'Тестовая книга-2',
+//   author: 'Неизвестный автор',
+//   genres: ['фантастика'],
+//   rating: 8.0,
+// };
+
+// function addBook(book) {
+//   const options = {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(book),
+//   };
+
+//   return fetch(`${BASE_URL}/books`, options)
+//     .then(res => res.json())
+//     .then(console.log);
+// }
+
+// addBook({
+//   title: 'Тестовая книга-3',
+//   author: 'Известный автор',
+//   genres: ['приключения'],
+//   rating: 8.6,
+// }).then(renderBook);
+
+// function renderBook(book) {
+//   console.log('Пришел ответ от БЭКЕНДА можно идти дальше');
+//   console.log(book);
+// }
+
+// ПЕРЕЗАПИСЬ ============================================
 
 const BASE_URL = 'http://localhost:3000';
 
+// const options = {
+//   method: 'PATCH',
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify({ title: 'Новая книга' }),
+// };
+
+// fetch(`${BASE_URL}/books/11`, options)
+//   .then(res => res.json())
+//   .then(console.log);
+
+// улучшаем
+function updateBookById(update, bookId) {
+  const options = {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(update),
+  };
+
+  return fetch(`${BASE_URL}/books/${bookId}`, options)
+    .then(res => res.json())
+    .then(console.log);
+}
+
+updateBookById({ title: 'Страшная книга' }, 10);
+
+// масив
 function fetchBooks() {
   fetch(`${BASE_URL}/books`)
     .then(res => res.json())
     .then(console.log);
 }
-
 fetchBooks();
-
-function fetchBookById(bookId) {
-  fetch(`${BASE_URL}/books/${bookId}`)
-    .then(res => res.json())
-    .then(console.log);
-}
-
-fetchBookById(5);
-fetchBookById(7);
-
-// ПИСАЛКА
