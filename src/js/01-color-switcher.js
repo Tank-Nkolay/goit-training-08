@@ -97,7 +97,7 @@
 
 // ПЕРЕЗАПИСЬ ============================================
 
-const BASE_URL = 'http://localhost:3000';
+// const BASE_URL = 'http://localhost:3000';
 
 // const options = {
 //   method: 'PATCH',
@@ -112,13 +112,37 @@ const BASE_URL = 'http://localhost:3000';
 //   .then(console.log);
 
 // улучшаем
-function updateBookById(update, bookId) {
+// function updateBookById(update, bookId) {
+//   const options = {
+//     method: 'PATCH',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(update),
+//   };
+
+//   return fetch(`${BASE_URL}/books/${bookId}`, options)
+//     .then(res => res.json())
+//     .then(console.log);
+// }
+
+// updateBookById({ title: 'Страшная книга' }, 10);
+
+// масив
+// function fetchBooks() {
+//   fetch(`${BASE_URL}/books`)
+//     .then(res => res.json())
+//     .then(console.log);
+// }
+// fetchBooks();
+
+// УДАЛЕНИЕ ============================================
+
+const BASE_URL = 'http://localhost:3000';
+
+function removeBook(bookId) {
   const options = {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(update),
+    method: 'DELETE',
   };
 
   return fetch(`${BASE_URL}/books/${bookId}`, options)
@@ -126,7 +150,7 @@ function updateBookById(update, bookId) {
     .then(console.log);
 }
 
-updateBookById({ title: 'Страшная книга' }, 10);
+removeBook(11);
 
 // масив
 function fetchBooks() {
