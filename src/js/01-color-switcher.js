@@ -39,6 +39,8 @@
 // пример РАБОТА С МАСИВОМ БЭКЕНД
 // -----------------------------------------------------------------------------
 
+// ЧИТАЛКА
+
 const BASE_URL = 'http://localhost:3000';
 
 function fetchBooks() {
@@ -57,3 +59,5 @@ function fetchBookById(bookId) {
 
 fetchBookById(5);
 fetchBookById(7);
+
+// ПИСАЛКА
