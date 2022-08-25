@@ -1,2 +1,0 @@
-!function(){var o,n,t,e="http://localhost:3000";o={title:"Страшная книга"},n=10,t={method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify(o)},fetch("".concat(e,"/books/").concat(n),t).then((function(o){return o.json()})).then(console.log),fetch("".concat(e,"/books")).then((function(o){return o.json()})).then(console.log)}();
-//# sourceMappingURL=01-color-switcher.00f5aeb0.js.map
