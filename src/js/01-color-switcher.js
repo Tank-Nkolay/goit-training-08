@@ -60,7 +60,7 @@
 // fetchBookById(5);
 // fetchBookById(7);
 
-// ПИСАЛКА ============================================
+// ДОБАВЛЯЕМ ============================================
 
 // const newBook = {
 //   title: 'Тестовая книга-2',
@@ -88,7 +88,7 @@
 //   author: 'Известный автор',
 //   genres: ['приключения'],
 //   rating: 8.6,
-// }).then(renderBook);
+// }).then(renderBook).catch(error => console.log(error));
 
 // function renderBook(book) {
 //   console.log('Пришел ответ от БЭКЕНДА можно идти дальше');
@@ -147,7 +147,8 @@ function removeBook(bookId) {
 
   return fetch(`${BASE_URL}/books/${bookId}`, options)
     .then(res => res.json())
-    .then(console.log);
+    .then(console.log)
+    .catch(error => console.log(error));
 }
 
 removeBook(11);
@@ -159,3 +160,5 @@ function fetchBooks() {
     .then(console.log);
 }
 fetchBooks();
+
+// ============================================
