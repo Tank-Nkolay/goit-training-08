@@ -138,27 +138,29 @@
 
 // УДАЛЕНИЕ ============================================
 
-const BASE_URL = 'http://localhost:3000';
+// const BASE_URL = 'http://localhost:3000';
 
-function removeBook(bookId) {
-  const options = {
-    method: 'DELETE',
-  };
+// function removeBook(bookId) {
+//   const options = {
+//     method: 'DELETE',
+//   };
 
-  return fetch(`${BASE_URL}/books/${bookId}`, options)
-    .then(res => res.json())
-    .then(console.log)
-    .catch(error => console.log(error));
-}
+//   return fetch(`${BASE_URL}/books/${bookId}`, options)
+//     .then(res => res.json())
+//     .then(console.log)
+//     .catch(error => console.log(error));
+// }
 
-removeBook(11);
+// removeBook(11);
 
 // масив
-function fetchBooks() {
-  fetch(`${BASE_URL}/books`)
-    .then(res => res.json())
-    .then(console.log);
-}
-fetchBooks();
+// function fetchBooks() {
+//   fetch(`${BASE_URL}/books`)
+//     .then(res => res.json())
+//     .then(console.log);
+// }
+// fetchBooks();
 
-// ============================================
+// -----------------------------------------------------------------------------
+// пример TRY CATCH
+// -----------------------------------------------------------------------------
