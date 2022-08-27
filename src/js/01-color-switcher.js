@@ -176,36 +176,36 @@
 // пример АССИНХРОННАЯ ФУНКЦИЯ а паралельным вызовом
 // -----------------------------------------------------------------------------
 
-function getFruit(name) {
-  const fruits = {
-    strawberry: 'Клубника',
-    kiwi: 'Киви',
-    apple: 'Яблоко',
-  };
+// function getFruit(name) {
+//   const fruits = {
+//     strawberry: 'Клубника',
+//     kiwi: 'Киви',
+//     apple: 'Яблоко',
+//   };
 
-  return new Promise(resolve => setTimeout(() => resolve(fruits[name]), 500));
-}
+//   return new Promise(resolve => setTimeout(() => resolve(fruits[name]), 500));
+// }
 
-async function aMakeSmoothie() {
-  try {
-    console.time('aMakeSmoothie');
+// async function aMakeSmoothie() {
+//   try {
+//     console.time('aMakeSmoothie');
 
-    const apple = getFruit('apple');
-    const kiwi = getFruit('kiwi');
-    const barry = getFruit('strawberry');
+//     const apple = getFruit('apple');
+//     const kiwi = getFruit('kiwi');
+//     const barry = getFruit('strawberry');
 
-    const fruits = await Promise.all([apple, kiwi, barry]);
-    console.log(fruits);
+//     const fruits = await Promise.all([apple, kiwi, barry]);
+//     console.log(fruits);
 
-    // return fruits;
+//     // return fruits;
 
-    console.timeEnd('aMakeSmoothie');
-  } catch (error) {
-    console.log(error);
-  }
-}
+//     console.timeEnd('aMakeSmoothie');
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-aMakeSmoothie();
+// aMakeSmoothie();
 // aMakeSmoothie().then(fruits => console.log(fruits));
 
 // ================== пример переводим в АССИНХРОННУЮ ФУНКЦИЮ наш запрос на БЭКЕНД ==================
@@ -217,19 +217,18 @@ aMakeSmoothie();
 //   rating: 8.0,
 // };
 
-// function addBook(book) {
-//   const options = {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(book),
-//   };
+async function addBook(book) {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(book),
+  };
 
-//   return fetch(`${BASE_URL}/books`, options)
-//     .then(res => res.json())
-//     .then(console.log);
-// }
+  const response = await fetch(`${BASE_URL}/books`, options);
+  const newBook = await response.json();
+}
 
 // addBook({
 //   title: 'Тестовая книга-3',
