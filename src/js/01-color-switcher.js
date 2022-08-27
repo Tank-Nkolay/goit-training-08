@@ -165,9 +165,38 @@
 // пример TRY CATCH
 // -----------------------------------------------------------------------------
 
-try {
-  console.log('внутри try');
-} catch (error) {
-  console.log('Ошибка!');
+// try {
+//   console.log('внутри try');
+// } catch (error) {
+//   console.log('Ошибка!');
+// }
+// console.log('После try ... catch');
+
+// -----------------------------------------------------------------------------
+// пример АССИНХРОННАЯ ФУНКЦИЯ а паралельным вызовом
+// -----------------------------------------------------------------------------
+
+function getFruit(name) {
+  const fruits = {
+    strawberry: 'Клубника',
+    kiwi: 'Киви',
+    apple: 'Яблоко',
+  };
+
+  return new Promise(resolve => setTimeout(() => resolve(fruits[name]), 500));
 }
-console.log('После try ... catch');
+
+async function aMakeSmoothie() {
+  console.time('aMakeSmoothie');
+
+  const apple = getFruit('apple');
+  const kiwi = getFruit('kiwi');
+  const barry = getFruit('strawberry');
+
+  const fruits = await Promise.all([apple, kiwi, barry]);
+  console.log(fruits);
+
+  console.timeEnd('aMakeSmoothie');
+}
+
+aMakeSmoothie();
