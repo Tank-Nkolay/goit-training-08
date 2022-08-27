@@ -207,3 +207,38 @@ async function aMakeSmoothie() {
 
 aMakeSmoothie();
 // aMakeSmoothie().then(fruits => console.log(fruits));
+
+// ================== пример переводим в АССИНХРОННУЮ ФУНКЦИЮ наш запрос на БЭКЕНД ==================
+
+// const newBook = {
+//   title: 'Тестовая книга-2',
+//   author: 'Неизвестный автор',
+//   genres: ['фантастика'],
+//   rating: 8.0,
+// };
+
+// function addBook(book) {
+//   const options = {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(book),
+//   };
+
+//   return fetch(`${BASE_URL}/books`, options)
+//     .then(res => res.json())
+//     .then(console.log);
+// }
+
+// addBook({
+//   title: 'Тестовая книга-3',
+//   author: 'Известный автор',
+//   genres: ['приключения'],
+//   rating: 8.6,
+// }).then(renderBook).catch(error => console.log(error));
+
+// function renderBook(book) {
+//   console.log('Пришел ответ от БЭКЕНДА можно идти дальше');
+//   console.log(book);
+// }
