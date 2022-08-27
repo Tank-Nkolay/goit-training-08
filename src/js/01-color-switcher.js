@@ -187,16 +187,20 @@ function getFruit(name) {
 }
 
 async function aMakeSmoothie() {
-  console.time('aMakeSmoothie');
+  try {
+    console.time('aMakeSmoothie');
 
-  const apple = getFruit('apple');
-  const kiwi = getFruit('kiwi');
-  const barry = getFruit('strawberry');
+    const apple = getFruit('apple');
+    const kiwi = getFruit('kiwi');
+    const barry = getFruit('strawberry');
 
-  const fruits = await Promise.all([apple, kiwi, barry]);
-  console.log(fruits);
+    const fruits = await Promise.all([apple, kiwi, barry]);
+    console.log(fruits);
 
-  console.timeEnd('aMakeSmoothie');
+    console.timeEnd('aMakeSmoothie');
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 aMakeSmoothie();
