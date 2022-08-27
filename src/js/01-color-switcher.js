@@ -197,6 +197,8 @@ async function aMakeSmoothie() {
     const fruits = await Promise.all([apple, kiwi, barry]);
     console.log(fruits);
 
+    // return fruits;
+
     console.timeEnd('aMakeSmoothie');
   } catch (error) {
     console.log(error);
@@ -204,3 +206,4 @@ async function aMakeSmoothie() {
 }
 
 aMakeSmoothie();
+// aMakeSmoothie().then(fruits => console.log(fruits));
