@@ -230,6 +230,15 @@ async function addBook(book) {
   const newBook = await response.json();
 }
 
+async function addAndRenderBook() {
+  try {
+    const book = await addBook({});
+    console.log(book);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 // addBook({
 //   title: 'Тестовая книга-3',
 //   author: 'Известный автор',
