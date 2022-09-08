@@ -8,6 +8,7 @@ const refs = {
   form: document.querySelector('.form'),
   list: document.querySelector('.list'),
   buttons: document.querySelector('.buttons'),
+  loader: document.querySelector('.loader'),
 };
 
 let query = '';

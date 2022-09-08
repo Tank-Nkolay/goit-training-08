@@ -44,6 +44,10 @@ button {
   color: tomato;
 }
 
+/* скрываем или показываем загрузку */
 .loader {
   display: none;
+}
+.visible {
+  display: block;
 }
