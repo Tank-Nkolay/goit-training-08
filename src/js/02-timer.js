@@ -21,8 +21,8 @@ const render = () => {
   const list = items
     .map(({ title, url }) => `<ul><a href="${url}">${title}</a></ul>`)
     .join('');
-  refs.form.innerHTML = '';
-  refs.form.insertAdjacentHTML('beforeend', list);
+  refs.list.innerHTML = '';
+  refs.list.insertAdjacentHTML('beforeend', list);
   console.log(items);
 };
 
