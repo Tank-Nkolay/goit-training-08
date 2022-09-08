@@ -43,3 +43,7 @@ button {
   font-size: 44px;
   color: tomato;
 }
+
+.loader {
+  display: none;
+}
