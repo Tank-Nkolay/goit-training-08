@@ -18,6 +18,7 @@ let totalPages = 0;
 
 // отдельная функция под items в функции fetchData ===========
 const render = () => {
+  refs.form.innerHTML = '';
   console.log(items);
 };
 
