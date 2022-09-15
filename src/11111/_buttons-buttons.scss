@@ -1,0 +1,89 @@
+/* ----- portfolio кнопки ----- */
+/* делаем кнопки портфолио в линию и расположение */
+.button-line {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.button-position {
+  margin-left: 8px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-top: 15px;
+
+    &:nth-child(4) {
+      margin-left: 0;
+    }
+    &:nth-child(-n + 3) {
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    margin-top: 15px;
+  }
+}
+.button-position:first-child {
+  margin-left: 0px;
+}
+
+/* portfolio кнопка все */
+.button-portfolio-all {
+  font-family: inherit;
+  color: var(--color-selection-button-text);
+  background-color: var(--color-selection-button-background);
+  width: 73px;
+  height: 38px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  cursor: pointer;
+
+  max-width: 150px;
+  min-height: 38px;
+  border: 0;
+  padding: 6px 22px;
+}
+
+/* portfolio кнопки выбора  */
+.button-portfolio-choice {
+  font-family: inherit;
+  background: var(--color-button-portfolio);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  cursor: pointer;
+
+  max-width: 150px;
+  min-height: 38px;
+  border: 0;
+  padding: 6px 22px;
+}
+
+/* tab кнопок portfolio */
+.selection-button-portfolio {
+  transition: color 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function),
+    box-shadow 250ms var(--animation-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--color-selection-button-text);
+    background-color: var(--color-selection-button-background);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
