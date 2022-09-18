@@ -60,5 +60,3 @@ const handleSubmit = e => {
   fetchData();
 };
 refs.form.addEventListener('submit', handleSubmit);
-// =======================================
-// =======================================
